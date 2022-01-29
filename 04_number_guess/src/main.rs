@@ -5,7 +5,7 @@ use std::process::exit;
 use rand::Rng;
 
 fn main() {
-    let target: u32 = rand::thread_rng().gen_range(1..101);
+    let target: u32 = rand::thread_rng().gen_range(1..=100);
     let chances: u32 = 10;
     let mut tries: u32 = 0;
 
