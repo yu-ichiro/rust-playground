@@ -19,10 +19,9 @@ fn main() {
             .and_then(|_| {
                 guess.trim().parse().ok()
             });
-        println!("{}", guess.is_some());
         if guess.is_none() {
             println!("Failed to parse the guess. Try again.");
-            continue
+            continue;
         }
         let guess = guess.unwrap();
 
@@ -32,7 +31,7 @@ fn main() {
             Ordering::Equal => {
                 println!("You're correct! Number of tries: {}", tries + 1);
                 return;
-            },
+            }
         };
 
         tries += 1;
@@ -42,6 +41,5 @@ fn main() {
             println!("{} No more chances left. The answer was: {}", result, target);
             exit(1);
         }
-
     }
 }
